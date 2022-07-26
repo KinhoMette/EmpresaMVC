@@ -1,0 +1,12 @@
+C:\Users\84961\source\Apex\Empresa\Empresa.Dominio\bin\Debug\net5.0\Empresa.Dominio.deps.json
+C:\Users\84961\source\Apex\Empresa\Empresa.Dominio\bin\Debug\net5.0\Empresa.Dominio.dll
+C:\Users\84961\source\Apex\Empresa\Empresa.Dominio\bin\Debug\net5.0\ref\Empresa.Dominio.dll
+C:\Users\84961\source\Apex\Empresa\Empresa.Dominio\bin\Debug\net5.0\Empresa.Dominio.pdb
+C:\Users\84961\source\Apex\Empresa\Empresa.Dominio\obj\Debug\net5.0\Empresa.Dominio.csproj.AssemblyReference.cache
+C:\Users\84961\source\Apex\Empresa\Empresa.Dominio\obj\Debug\net5.0\Empresa.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\84961\source\Apex\Empresa\Empresa.Dominio\obj\Debug\net5.0\Empresa.Dominio.AssemblyInfoInputs.cache
+C:\Users\84961\source\Apex\Empresa\Empresa.Dominio\obj\Debug\net5.0\Empresa.Dominio.AssemblyInfo.cs
+C:\Users\84961\source\Apex\Empresa\Empresa.Dominio\obj\Debug\net5.0\Empresa.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\84961\source\Apex\Empresa\Empresa.Dominio\obj\Debug\net5.0\Empresa.Dominio.dll
+C:\Users\84961\source\Apex\Empresa\Empresa.Dominio\obj\Debug\net5.0\ref\Empresa.Dominio.dll
+C:\Users\84961\source\Apex\Empresa\Empresa.Dominio\obj\Debug\net5.0\Empresa.Dominio.pdb

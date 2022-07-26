@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form action="@Url.Action("Criar","Home")">
+        <input class="text-black-50" name="nomeFantasia" />
+        <input class="text-black-50" name="cnpj" />
+        <input class="text-black-50" name="situacao" />
+        <button type="submit">Enviar</button>
+    </form>
+</div>

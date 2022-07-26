@@ -1,0 +1,15 @@
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\obj\Debug\net5.0\Empresa.Infra.csproj.AssemblyReference.cache
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\obj\Debug\net5.0\Empresa.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\obj\Debug\net5.0\Empresa.Infra.AssemblyInfoInputs.cache
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\obj\Debug\net5.0\Empresa.Infra.AssemblyInfo.cs
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\obj\Debug\net5.0\Empresa.Infra.csproj.CoreCompileInputs.cache
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\bin\Debug\net5.0\Empresa.Infra.deps.json
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\bin\Debug\net5.0\Empresa.Infra.dll
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\bin\Debug\net5.0\ref\Empresa.Infra.dll
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\bin\Debug\net5.0\Empresa.Infra.pdb
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\bin\Debug\net5.0\Empresa.Dominio.dll
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\bin\Debug\net5.0\Empresa.Dominio.pdb
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\obj\Debug\net5.0\Empresa.Infra.csproj.CopyComplete
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\obj\Debug\net5.0\Empresa.Infra.dll
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\obj\Debug\net5.0\ref\Empresa.Infra.dll
+C:\Users\84961\source\Apex\Empresa\Empresa.Infra\obj\Debug\net5.0\Empresa.Infra.pdb
