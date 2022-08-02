@@ -47,9 +47,9 @@ namespace Empresa.Web.Controllers
             }
         }
 
-        public IActionResult Inativar(int id)
+        public IActionResult AlteraSituacao(int id, bool situacao)
         {
-            _empresaServico.Inativar(id);
+            _empresaServico.AlteraSituacao(id, situacao);
             return RedirectToAction("Index");
         }
 

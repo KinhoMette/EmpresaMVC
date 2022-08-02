@@ -56,11 +56,11 @@
                 </tr>
                 <tr class="panel">
                     <td>
-                        <a href="@Url.Action("Alterar","Empresa")/@item.Id" class="btn btn-secondary">
+                        <a href="@Url.Action("Alterar","Empresa")/@item.Id/" class="btn btn-secondary">
                             Alterar
                         </a>
-                        <a href="@Url.Action("Inativar","Empresa")/@item.Id" class="btn btn-warning">
-                            Inativar
+                        <a href="@Url.Action("AlteraSituacao","Empresa", new { id = item.Id,situacao = item.Situacao})" class="btn btn-warning">
+                            Altera situação
                         </a>
                         <a href="@Url.Action("Deletar","Empresa")/@item.Id" class="btn btn-danger">
                             Deletar

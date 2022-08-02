@@ -57,11 +57,11 @@ namespace Empresa.Aplicacao.Servicos
             _empresaRepositorio.SaveChanges();
         }
 
-        public void Inativar(int id)
+        public void AlteraSituacao(int id, bool situacao)
         {
             var empresa = _empresaRepositorio.GetById(id);
 
-            empresa.Situacao = false;
+            empresa.Situacao = !situacao;
 
             _empresaRepositorio.Update(empresa);
             _empresaRepositorio.SaveChanges();
