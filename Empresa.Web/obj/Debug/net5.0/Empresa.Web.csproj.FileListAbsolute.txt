@@ -387,3 +387,6 @@ C:\Users\84961\source\Apex\Empresa\Empresa.Web\obj\Debug\net5.0\Empresa.Web.dll
 C:\Users\84961\source\Apex\Empresa\Empresa.Web\obj\Debug\net5.0\ref\Empresa.Web.dll
 C:\Users\84961\source\Apex\Empresa\Empresa.Web\obj\Debug\net5.0\Empresa.Web.pdb
 C:\Users\84961\source\Apex\Empresa\Empresa.Web\obj\Debug\net5.0\Empresa.Web.genruntimeconfig.cache
+C:\Users\84961\source\Apex\Empresa\Empresa.Web\obj\Debug\net5.0\Empresa.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\84961\source\Apex\Empresa\Empresa.Web\obj\Debug\net5.0\Razor\Views\Empresa\Index.cshtml.g.cs
+C:\Users\84961\source\Apex\Empresa\Empresa.Web\obj\Debug\net5.0\Razor\Views\Empresa\Alterar.cshtml.g.cs

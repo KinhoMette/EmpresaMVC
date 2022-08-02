@@ -1,13 +1,11 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Aplicativo de aprendizado MVC";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <form action="@Url.Action("Criar","Home")">
-        <input class="text-black-50" name="nomeFantasia" />
-        <input class="text-black-50" name="cnpj" />
-        <input class="text-black-50" name="situacao" />
-        <button type="submit">Enviar</button>
-    </form>
+<div class="main-content container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1>@ViewBag.Title</h1>
+        </div>   
+    </div>
 </div>

@@ -1,4 +1,5 @@
 ﻿using Empresa.Dominio.Entidades;
+using Empresa.Dominio.Filtros;
 using Empresa.Dominio.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -17,20 +18,52 @@ namespace Empresa.Aplicacao.Servicos
             _empresaRepositorio = empresaRepositorio;
         }
 
-        public List<EmpresaModelo> ListarEmpresas()
+        public List<EmpresaModelo> ListarEmpresas(EmpresaFiltro filtro)
         {
-            return _empresaRepositorio.GetAll();
+            return _empresaRepositorio.ObterEmpresasPorFiltro(filtro);
         }
 
-        public void Inserir(string nomeFanstasia, string cnpj, bool situacao)
+        public void Inserir(string nomeFanstasia, string cnpj)
         {
-            EmpresaModelo entidade = new EmpresaModelo()
+            EmpresaModelo entidade = new()
             {
                 CPNJ = cnpj,
                 NomeFantasia = nomeFanstasia,
-                Situacao = situacao
+                Situacao = true
             };
             _empresaRepositorio.Add(entidade);
+            _empresaRepositorio.SaveChanges();
+        }
+
+        public EmpresaModelo ObterEmpresaPorId(int id)
+        {
+            return _empresaRepositorio.GetById(id);
+        }
+
+        public void Alterar(string nomeFanstasia, string cnpj, int id)
+        {
+            var empresa = _empresaRepositorio.GetById(id);
+
+            empresa.CPNJ = cnpj;
+            empresa.NomeFantasia = nomeFanstasia;
+
+            _empresaRepositorio.Update(empresa);
+            _empresaRepositorio.SaveChanges();
+        }
+
+        public void Deletar(int id)
+        {
+            _empresaRepositorio.Remove(id);
+            _empresaRepositorio.SaveChanges();
+        }
+
+        public void Inativar(int id)
+        {
+            var empresa = _empresaRepositorio.GetById(id);
+
+            empresa.Situacao = false;
+
+            _empresaRepositorio.Update(empresa);
             _empresaRepositorio.SaveChanges();
         }
     }

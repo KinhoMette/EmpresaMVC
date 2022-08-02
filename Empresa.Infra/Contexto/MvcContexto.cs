@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace Empresa.Infra.Contexto
 {
-    //Contexto = database ou contexto da database
     public class MvcContexto : DbContext
     {
         public MvcContexto(DbContextOptions<MvcContexto> options) : base(options)
