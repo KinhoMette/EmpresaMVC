@@ -1,7 +1,9 @@
 ﻿using Empresa.Dominio.Entidades;
 using Empresa.Dominio.Filtros;
 using Empresa.Dominio.Interfaces;
+using Empresa.Dominio.Models;
 using Empresa.Infra.Contexto;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +23,7 @@ namespace Empresa.Infra.Repositorios
             return DbSet.Where(x => x.NomeFantasia == nomeFantasia).FirstOrDefault();
         }
 
-        public List<EmpresaModelo> ObterEmpresasPorFiltro(EmpresaFiltro filtro)
+        public PaginatedList<EmpresaModelo> ObterEmpresasPorFiltro(EmpresaFiltro filtro)
         {
             var query = DbSet.AsQueryable();
 
@@ -29,12 +31,12 @@ namespace Empresa.Infra.Repositorios
                 query = query.Where(x => x.NomeFantasia.StartsWith(filtro.NomeFantasia));
 
             if (!string.IsNullOrEmpty(filtro.CNPJ))
-                query = query.Where(x => x.CPNJ == filtro.CNPJ);
+                query = query.Where(x => x.CNPJ == filtro.CNPJ);
 
             if (filtro.Situacao != null)
                 query = query.Where(x => x.Situacao == filtro.Situacao);
 
-            return query.ToList();
+            return PaginatedList<EmpresaModelo>.Create(query.AsNoTracking(), filtro.PageNumber ?? 1, filtro.PageSize);
         }
     }
 }

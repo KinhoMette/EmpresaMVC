@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\84961\\source\\Apex\\Empresa\\Empresa.Aplicacao\\Empresa.Aplicacao.csproj",
+      "projectUniqueName": "C:\\Users\\84961\\source\\Apex\\EmpresaMvc\\Empresa.Aplicacao\\Empresa.Aplicacao.csproj",
       "projectName": "Empresa.Aplicacao",
-      "projectPath": "C:\\Users\\84961\\source\\Apex\\Empresa\\Empresa.Aplicacao\\Empresa.Aplicacao.csproj",
+      "projectPath": "C:\\Users\\84961\\source\\Apex\\EmpresaMvc\\Empresa.Aplicacao\\Empresa.Aplicacao.csproj",
       "packagesPath": "C:\\Users\\84961\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\84961\\source\\Apex\\Empresa\\Empresa.Aplicacao\\obj\\",
+      "outputPath": "C:\\Users\\84961\\source\\Apex\\EmpresaMvc\\Empresa.Aplicacao\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -51,14 +51,16 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.havan.com.br/nuget": {},
+        "https://registry.tools.havan.com.br/nuget/nuget-havan/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\84961\\source\\Apex\\Empresa\\Empresa.Dominio\\Empresa.Dominio.csproj": {
-              "projectPath": "C:\\Users\\84961\\source\\Apex\\Empresa\\Empresa.Dominio\\Empresa.Dominio.csproj"
+            "C:\\Users\\84961\\source\\Apex\\EmpresaMvc\\Empresa.Dominio\\Empresa.Dominio.csproj": {
+              "projectPath": "C:\\Users\\84961\\source\\Apex\\EmpresaMvc\\Empresa.Dominio\\Empresa.Dominio.csproj"
             }
           }
         }
@@ -87,7 +89,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

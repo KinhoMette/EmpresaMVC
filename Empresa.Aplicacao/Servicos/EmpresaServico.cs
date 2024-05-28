@@ -1,6 +1,7 @@
 ﻿using Empresa.Dominio.Entidades;
 using Empresa.Dominio.Filtros;
 using Empresa.Dominio.Interfaces;
+using Empresa.Dominio.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Empresa.Aplicacao.Servicos
             _empresaRepositorio = empresaRepositorio;
         }
 
-        public List<EmpresaModelo> ListarEmpresas(EmpresaFiltro filtro)
+        public PaginatedList<EmpresaModelo> ListarEmpresas(EmpresaFiltro filtro)
         {
             return _empresaRepositorio.ObterEmpresasPorFiltro(filtro);
         }
@@ -27,7 +28,7 @@ namespace Empresa.Aplicacao.Servicos
         {
             EmpresaModelo entidade = new()
             {
-                CPNJ = cnpj,
+                CNPJ = cnpj,
                 NomeFantasia = nomeFanstasia,
                 Situacao = true
             };
@@ -44,7 +45,7 @@ namespace Empresa.Aplicacao.Servicos
         {
             var empresa = _empresaRepositorio.GetById(id);
 
-            empresa.CPNJ = cnpj;
+            empresa.CNPJ = cnpj;
             empresa.NomeFantasia = nomeFanstasia;
 
             _empresaRepositorio.Update(empresa);

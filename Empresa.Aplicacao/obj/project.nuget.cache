@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aqIN894fFbpdwBBTW/gVkHxf9hk5VyrLEeugfGeyvAyVlNrKmz7s/63eQFWUU4P2EgFby4GzOUOC80awWwq9MA==",
+  "dgSpecHash": "tTS7miZV2OHjYcSlJNmFOnjS4Ozg8EhVYMf1H9ixSinCgJDhjyzVBRlP2JmaQvR29wVQtFb8tJ7PtFdXBgCxQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\84961\\source\\Apex\\Empresa\\Empresa.Aplicacao\\Empresa.Aplicacao.csproj",
+  "projectFilePath": "C:\\Users\\84961\\source\\Apex\\EmpresaMvc\\Empresa.Aplicacao\\Empresa.Aplicacao.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

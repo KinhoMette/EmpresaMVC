@@ -1,6 +1,7 @@
-﻿@model List<Empresa.Dominio.Entidades.EmpresaModelo>
+﻿@model Empresa.Dominio.Models.PaginatedList<Empresa.Dominio.Entidades.EmpresaModelo>
+
 <div class="main-content">
-    <form action="@Url.Action("Index", "Empresa")">
+    <form action="@Url.Action("Index", "Empresa")" method="get">
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="nomeFantasia">Nome Fantasia</label>
@@ -11,14 +12,14 @@
                 <input name="CNPJ" type="text" class="form-control" id="cnpj">
             </div>
             <div class="form-group col-md-3">
-                <label for="inputState">Situacao</label>
+                <label for="inputState">Situação</label>
                 <select name="Situacao" id="inputState" class="form-control">
                     <option selected>Escolha</option>
                     <option value="true">Ativo</option>
                     <option value="false">Inativo</option>
                 </select>
             </div>
-            <input type="submit" value="Filtrar" class="btn btn-primary" style="width: 86px;  height: 34px;  padding-top: 5px;  margin-top: 35px;">
+            <input type="submit" value="Filtrar" class="btn btn-primary" style="width: 86px; height: 34px; padding-top: 5px; margin-top: 35px;">
         </div>
     </form>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal" style="margin-bottom: 10px;">
@@ -30,24 +31,16 @@
                 <th scope="col">Nome Fantasia</th>
                 <th scope="col">CNPJ</th>
                 <th scope="col">Situação</th>
+                <th scope="col">#</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
-
                 <tr class="accordion">
                     <td>@item.NomeFantasia</td>
-                    <td>@item.CPNJ</td>
-                    @if (item.Situacao == true)
-                    {
-                        <td>Ativo</td>
-                    }
-                    else
-                    {
-                        <td>Inativo</td>
-                    }
-
+                    <td>@item.CNPJ</td>
+                    <td>@(item.Situacao ? "Ativo" : "Inativo")</td>
                     <td class="text-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
@@ -56,13 +49,13 @@
                 </tr>
                 <tr class="panel">
                     <td>
-                        <a href="@Url.Action("Alterar","Empresa")/@item.Id/" class="btn btn-secondary">
+                        <a href="@Url.Action("Alterar", "Empresa", new { id = item.Id })" class="btn btn-secondary">
                             Alterar
                         </a>
-                        <a href="@Url.Action("AlteraSituacao","Empresa", new { id = item.Id,situacao = item.Situacao})" class="btn btn-warning">
-                            Altera situação
+                        <a href="@Url.Action("AlteraSituacao", "Empresa", new { id = item.Id, situacao = item.Situacao })" class="btn btn-warning">
+                            Alterar situação
                         </a>
-                        <a href="@Url.Action("Deletar","Empresa")/@item.Id" class="btn btn-danger">
+                        <a href="@Url.Action("Deletar", "Empresa", new { id = item.Id })" class="btn btn-danger">
                             Deletar
                         </a>
                     </td>
@@ -70,6 +63,7 @@
             }
         </tbody>
     </table>
+
     <!-- Modal -->
     <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -101,13 +95,26 @@
     </div>
 
     <!-- Paginação -->
-    <nav aria-label="Page navigation ">
+    <nav aria-label="Page navigation">
         <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            @if (Model.HasPreviousPage)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new { pageNumber = Model.PageIndex - 1, nomeFantasia = ViewContext.HttpContext.Request.Query["nomeFantasia"], cnpj = ViewContext.HttpContext.Request.Query["cnpj"], situacao = ViewContext.HttpContext.Request.Query["situacao"] })">Previous</a>
+                </li>
+            }
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                    <a class="page-link" href="@Url.Action("Index", new { pageNumber = i, nomeFantasia = ViewContext.HttpContext.Request.Query["nomeFantasia"], cnpj = ViewContext.HttpContext.Request.Query["cnpj"], situacao = ViewContext.HttpContext.Request.Query["situacao"] })">@i</a>
+                </li>
+            }
+            @if (Model.HasNextPage)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new { pageNumber = Model.PageIndex + 1, nomeFantasia = ViewContext.HttpContext.Request.Query["nomeFantasia"], cnpj = ViewContext.HttpContext.Request.Query["cnpj"], situacao = ViewContext.HttpContext.Request.Query["situacao"] })">Next</a>
+                </li>
+            }
         </ul>
     </nav>
 </div>

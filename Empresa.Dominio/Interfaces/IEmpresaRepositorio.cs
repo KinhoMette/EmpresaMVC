@@ -1,10 +1,6 @@
 ﻿using Empresa.Dominio.Entidades;
 using Empresa.Dominio.Filtros;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Empresa.Dominio.Models;
 
 namespace Empresa.Dominio.Interfaces
 {
@@ -12,6 +8,6 @@ namespace Empresa.Dominio.Interfaces
     {
         EmpresaModelo ObterPorNomeFantasia(string nomeFantasia);
 
-        List<EmpresaModelo> ObterEmpresasPorFiltro(EmpresaFiltro filtro);
+        PaginatedList<EmpresaModelo> ObterEmpresasPorFiltro(EmpresaFiltro filtro);
     }
 }

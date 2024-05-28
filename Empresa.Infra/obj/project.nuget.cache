@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "47KAP+xXHzw9tu+Aap96tHs0xcGT+tbmJ4eEKug4itbmuftdLZj3FrJrzCdJGkneut1LTLpGgA4UTED5eEQMZA==",
+  "dgSpecHash": "w19VWLyUuBhjJNzETEYOxPIKR1mAcDUhJBDt3LgGDdAkZo15n3v460a6V1FfuxfraDV0JBpieXfBQ9ikR2Vasw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\84961\\source\\Apex\\Empresa\\Empresa.Infra\\Empresa.Infra.csproj",
+  "projectFilePath": "C:\\Users\\84961\\source\\Apex\\EmpresaMvc\\Empresa.Infra\\Empresa.Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\84961\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.17\\microsoft.entityframeworkcore.5.0.17.nupkg.sha512",
     "C:\\Users\\84961\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.17\\microsoft.entityframeworkcore.abstractions.5.0.17.nupkg.sha512",
