@@ -23,6 +23,11 @@ namespace Empresa.Infra.Repositorios
             return DbSet.Where(x => x.NomeFantasia == nomeFantasia).FirstOrDefault();
         }
 
+        public bool VerificaEmpresaExiste(string cnpj)
+        {
+            return DbSet.Where(x => x.CNPJ == cnpj).Any();
+        }
+
         public PaginatedList<EmpresaModelo> ObterEmpresasPorFiltro(EmpresaFiltro filtro)
         {
             var query = DbSet.AsQueryable();
@@ -35,6 +40,8 @@ namespace Empresa.Infra.Repositorios
 
             if (filtro.Situacao != null)
                 query = query.Where(x => x.Situacao == filtro.Situacao);
+
+            
 
             return PaginatedList<EmpresaModelo>.Create(query.AsNoTracking(), filtro.PageNumber ?? 1, filtro.PageSize);
         }

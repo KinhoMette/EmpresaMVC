@@ -80,14 +80,20 @@
                             <label for="inputEmail4">Nome Fantasia</label>
                             <input name="NomeFantasia" type="text" class="form-control" id="ema">
                         </div>
-                        <div class="form-group col-md-5">
+                        <div class="form-group col-md-5 ">
                             <label for="cnpj">CNPJ</label>
                             <input name="CNPJ" type="text" class="form-control" id="cnpj">
+                            <div class="invalid-feedback">
+                                Please choose a username.
+                            </div>
                         </div>
+                    </div>
+                    <div class="alert alert-danger d-none" id="cnpjAlert" role="alert">
+                        CNPJ já existe na base de dados.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <button type="button" class="btn btn-primary" id="saveBtn">Salvar</button>
                     </div>
                 </form>
             </div>
@@ -118,3 +124,28 @@
         </ul>
     </nav>
 </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#saveBtn').on('click', function(event) {
+            var cnpj = $('#cnpj').val();
+            $.ajax({
+                url: '@Url.Action("VerificaCNPJexiste", "Empresa")',
+                type: 'GET',
+                data: { cnpj: cnpj },
+                success: function(response) {
+                    if (response.empresaExiste) {
+                        $('#cnpjAlert').removeClass('d-none').text('CNPJ já existe na base de dados.');
+                    } else {
+                        // Hide the alert if it was previously shown
+                        $('#cnpjAlert').addClass('d-none');
+                        // If the CNPJ doesn't exist, submit the form
+                        $('form').submit();
+                    }
+                },
+                error: function() {
+                    $('#cnpjAlert').removeClass('d-none').text('Erro ao verificar CNPJ.');
+                }
+            });
+        });
+    });
+</script>

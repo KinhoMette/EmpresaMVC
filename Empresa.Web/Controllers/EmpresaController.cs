@@ -58,5 +58,12 @@ namespace Empresa.Web.Controllers
             _empresaServico.Deletar(id);
             return RedirectToAction("Index");
         }
+
+        public JsonResult VerificaCNPJexiste(string cnpj)
+        {
+            var empresaExiste = _empresaServico.EmpresaExiste(cnpj);
+
+           return Json(new { empresaExiste });
+        }
     }
 }

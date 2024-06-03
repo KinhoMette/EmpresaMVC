@@ -67,5 +67,10 @@ namespace Empresa.Aplicacao.Servicos
             _empresaRepositorio.Update(empresa);
             _empresaRepositorio.SaveChanges();
         }
+
+        public bool EmpresaExiste(string cnpj)
+        {
+            return _empresaRepositorio.VerificaEmpresaExiste(cnpj);
+        }
     }
 }
